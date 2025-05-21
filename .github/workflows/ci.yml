@@ -14,11 +14,9 @@ jobs:
         python-version: [3.8, 3.9, 3.10]
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v4
+      - uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
 
@@ -29,19 +27,16 @@ jobs:
           pip install flake8 black pytest pytest-cov codecov
 
       - name: Lint with flake8
-        run: |
-          flake8 .
+        run: flake8 .
 
       - name: Check formatting with black
-        run: |
-          black --check .
+        run: black --check .
 
       - name: Run tests with coverage
-        run: |
-          pytest --cov=./ --cov-report=xml
+        run: pytest --cov=./ --cov-report=xml
 
       - name: Upload coverage report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@7b31b9f19b9233f0344a493af05a4d92823e274b
         with:
           name: coverage-report
           path: coverage.xml
