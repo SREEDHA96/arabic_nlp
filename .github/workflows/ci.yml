@@ -30,5 +30,17 @@ jobs:
       - name: Install Python dependencies
         run: pip install -r requirements.txt
 
-      # Optional: Run your main script
       - name: Run Arabic NLP script
+        run: python arabic_nlp.py
+
+      - name: Install testing tools
+        run: pip install pytest flake8 black
+
+      - name: Run tests
+        run: pytest test_arabic_nlp.py
+
+      - name: Lint with flake8
+        run: flake8 .
+
+      - name: Check code formatting with Black
+        run: black --check .
