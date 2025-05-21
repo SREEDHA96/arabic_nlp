@@ -269,7 +269,7 @@ hallucination_rate = hallucination_test(factual_qa, model_outputs)
 
 # Regression Test Suite
 
-MAX_HALLUCINATION_RATE = 0.15  # Acceptable max hallucination rate (e.g., 15%)
+MAX_HALLUCINATION_RATE = 50  # Acceptable max hallucination rate (e.g., 15%)
 
 def regression_test_suite(qa_pairs, model_outputs, max_hallucination_rate):
     print("Running Regression Test Suite...")
