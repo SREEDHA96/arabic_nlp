@@ -1,3 +1,7 @@
-scikit-learn
+camel-tools
+faiss-cpu
+rank_bm25
+streamlit
+numpy==1.24.4
 pandas
-numpy
+scikit-learn
