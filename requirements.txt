@@ -1,4 +1,3 @@
-camel-tools
 faiss-cpu
 rank_bm25
 streamlit
