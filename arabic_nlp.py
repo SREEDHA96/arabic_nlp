@@ -8,7 +8,6 @@ Original file is located at
 """
 
 import os
-
 folders = [
     "data/raw",
     "data/annotated",
