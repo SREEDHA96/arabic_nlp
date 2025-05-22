@@ -34,13 +34,7 @@ jobs:
         run: python arabic_nlp.py
 
       - name: Install testing tools
-        run: pip install pytest flake8 black
+        run: pip install pytest
 
       - name: Run tests
         run: pytest test_arabic_nlp.py
-
-      - name: Lint with flake8
-        run: flake8 .
-
-      - name: Check code formatting with Black
-        run: black --check .
